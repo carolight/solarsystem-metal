@@ -18,8 +18,8 @@ protocol MouseDelegate {
 
 class InputController {
     var player: Node?
-    var translationSpeed: Float = 1.0
-    var rotationSpeed: Float = 1.0
+    var translationSpeed: Float = 0.5
+    var rotationSpeed: Float = 0.5
     
     var keyboardDelegate: KeyboardDelegate?
     var directionKeysDown: Set<KeyboardControl> = []
@@ -47,6 +47,16 @@ class InputController {
     }
     
     public func updatePlayer(deltaTime: Float) {
+
+      switch player {
+      case is RocketController:
+        (player as? RocketController)?
+          .updatePlayer(deltaTime: deltaTime, keys: directionKeysDown)
+        return
+      default:
+        break
+      }
+
         guard let player = player else { return }
         
         let translationSpeed = deltaTime * self.translationSpeed
@@ -55,22 +65,19 @@ class InputController {
         for key in directionKeysDown {
             switch key {
             case .space:
-                direction.z += 1
-            //MARK: - support 3 dimension
-//            case .w:
-//                player.rotation.x += rotationSpeed
+                direction.y += 1
+            case .w:
+                player.rotation.x += rotationSpeed
             case .a:
                 player.rotation.y -= rotationSpeed
-            //MARK: - support 3 dimension
-//            case .s:
-//                player.rotation.x -= rotationSpeed
+            case .s:
+                player.rotation.x -= rotationSpeed
             case .d:
                 player.rotation.y += rotationSpeed
-            //FIXME: uptate rocket object origin points
-//            case .q:
-//                player.rotation.z += rotationSpeed
-//            case .e:
-//                player.rotation.z -= rotationSpeed
+            case .q:
+                player.rotation.z += rotationSpeed
+            case .e:
+                player.rotation.z -= rotationSpeed
             default:
                 break
             }
@@ -78,7 +85,7 @@ class InputController {
         
         if direction != [0, 0, 0] {
             direction = normalize(direction)
-            player.position += (direction.z * player.forwardVector + direction.x * player.rightVector) * translationSpeed
+            player.position += (direction.y * player.forwardVector3D) * translationSpeed
         }
     }
 }

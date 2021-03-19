@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3803C1DA2602876E00FE5A63 /* PhysicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803C1D92602876E00FE5A63 /* PhysicsController.swift */; };
-		3803C1DB2602876E00FE5A63 /* PhysicsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803C1D92602876E00FE5A63 /* PhysicsController.swift */; };
-		3803C1E4260294A200FE5A63 /* DebugBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803C1E2260294A200FE5A63 /* DebugBoundingBox.swift */; };
-		3803C1E5260294A200FE5A63 /* DebugBoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3803C1E2260294A200FE5A63 /* DebugBoundingBox.swift */; };
-		3803C1E6260294A200FE5A63 /* DebugBoundingBox.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3803C1E3260294A200FE5A63 /* DebugBoundingBox.metal */; };
-		3803C1E7260294A200FE5A63 /* DebugBoundingBox.metal in Sources */ = {isa = PBXBuildFile; fileRef = 3803C1E3260294A200FE5A63 /* DebugBoundingBox.metal */; };
 		38040C6725B31B8200AED8C8 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38040C6625B31B8200AED8C8 /* Textures.xcassets */; };
 		38040C6825B31B8300AED8C8 /* Textures.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38040C6625B31B8200AED8C8 /* Textures.xcassets */; };
 		3809898C259F5CF800F311C5 /* Texturable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3809898B259F5CF800F311C5 /* Texturable.swift */; };
@@ -100,12 +94,17 @@
 		38D3A1EC25F0065C001EACC8 /* rocket.obj in Resources */ = {isa = PBXBuildFile; fileRef = 38D3A1E825F0065A001EACC8 /* rocket.obj */; };
 		38E7B5C525B61C6000D32001 /* PBR.metal in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B5C425B61C6000D32001 /* PBR.metal */; };
 		38E7B5C625B61C6000D32001 /* PBR.metal in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B5C425B61C6000D32001 /* PBR.metal */; };
+		82C8AD572604637B00FBACC5 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C8AD562604637B00FBACC5 /* Rocket.swift */; };
+		82C8AD5C2604638D00FBACC5 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C8AD562604637B00FBACC5 /* Rocket.swift */; };
+		82C8AD602604639200FBACC5 /* RocketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C8AD5F2604639200FBACC5 /* RocketController.swift */; };
+		82C8AD632604639500FBACC5 /* RocketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C8AD5F2604639200FBACC5 /* RocketController.swift */; };
+		82C8AD792604660E00FBACC5 /* Spaceship5.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 82C8AD772604660E00FBACC5 /* Spaceship5.mtl */; };
+		82C8AD7A2604660E00FBACC5 /* Spaceship5.mtl in Resources */ = {isa = PBXBuildFile; fileRef = 82C8AD772604660E00FBACC5 /* Spaceship5.mtl */; };
+		82C8AD7B2604660E00FBACC5 /* Spaceship5.obj in Resources */ = {isa = PBXBuildFile; fileRef = 82C8AD782604660E00FBACC5 /* Spaceship5.obj */; };
+		82C8AD7C2604660E00FBACC5 /* Spaceship5.obj in Resources */ = {isa = PBXBuildFile; fileRef = 82C8AD782604660E00FBACC5 /* Spaceship5.obj */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3803C1D92602876E00FE5A63 /* PhysicsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhysicsController.swift; sourceTree = "<group>"; };
-		3803C1E2260294A200FE5A63 /* DebugBoundingBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugBoundingBox.swift; sourceTree = "<group>"; };
-		3803C1E3260294A200FE5A63 /* DebugBoundingBox.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = DebugBoundingBox.metal; sourceTree = "<group>"; };
 		38040C6625B31B8200AED8C8 /* Textures.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Textures.xcassets; sourceTree = "<group>"; };
 		3809898B259F5CF800F311C5 /* Texturable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Texturable.swift; sourceTree = "<group>"; };
 		388B128725C5741400B821C2 /* Renderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderable.swift; sourceTree = "<group>"; };
@@ -160,6 +159,11 @@
 		38D3A1E725F0065A001EACC8 /* rocket.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rocket.mtl; sourceTree = "<group>"; };
 		38D3A1E825F0065A001EACC8 /* rocket.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = rocket.obj; sourceTree = "<group>"; };
 		38E7B5C425B61C6000D32001 /* PBR.metal */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.metal; path = PBR.metal; sourceTree = "<group>"; };
+		82C8AD562604637B00FBACC5 /* Rocket.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		82C8AD5F2604639200FBACC5 /* RocketController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketController.swift; sourceTree = "<group>"; };
+		82C8AD772604660E00FBACC5 /* Spaceship5.mtl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spaceship5.mtl; sourceTree = "<group>"; };
+		82C8AD782604660E00FBACC5 /* Spaceship5.obj */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Spaceship5.obj; sourceTree = "<group>"; };
+		82C8AD812604666800FBACC5 /* License.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = License.md; sourceTree = "<group>"; };
 		FD057A5F258F7B6100C67DEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FD057A76258F7E0500C67DEF /* Renderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Renderer.swift; sourceTree = "<group>"; };
 		FD057A7A258F84DE00C67DEF /* Primitive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Primitive.swift; sourceTree = "<group>"; };
@@ -207,8 +211,8 @@
 		38999E5B25927A4C00C265F7 /* SolarSystem-macOS */ = {
 			isa = PBXGroup;
 			children = (
-				38999E5C25927A4C00C265F7 /* AppDelegate.swift */,
 				38D39D0725D7F6B7001EACC8 /* InputController.swift */,
+				38999E5C25927A4C00C265F7 /* AppDelegate.swift */,
 				38D39D0B25D7F742001EACC8 /* DemoView.swift */,
 				3899A0B6259A51D200C265F7 /* ViewControllerExtension.swift */,
 				38999E6025927A4D00C265F7 /* Assets.xcassets */,
@@ -222,10 +226,7 @@
 		38999E8525927DDD00C265F7 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
-				3803C1E3260294A200FE5A63 /* DebugBoundingBox.metal */,
-				3803C1E2260294A200FE5A63 /* DebugBoundingBox.swift */,
 				38999E8625927DDD00C265F7 /* MathLibrary.swift */,
-				3803C1D92602876E00FE5A63 /* PhysicsController.swift */,
 				3899A0BD259C95F900C265F7 /* DebugLights.swift */,
 				3899A0C2259C961400C265F7 /* DebugLights.metal */,
 				388B129825C6CAB900B821C2 /* SphereAnimations.swift */,
@@ -310,6 +311,18 @@
 			path = rocket;
 			sourceTree = "<group>";
 		};
+		82C8AD6A2604641700FBACC5 /* NewFiles */ = {
+			isa = PBXGroup;
+			children = (
+				82C8AD772604660E00FBACC5 /* Spaceship5.mtl */,
+				82C8AD782604660E00FBACC5 /* Spaceship5.obj */,
+				82C8AD812604666800FBACC5 /* License.md */,
+				82C8AD562604637B00FBACC5 /* Rocket.swift */,
+				82C8AD5F2604639200FBACC5 /* RocketController.swift */,
+			);
+			path = NewFiles;
+			sourceTree = "<group>";
+		};
 		FD057A4F258F7B6100C67DEF = {
 			isa = PBXGroup;
 			children = (
@@ -334,17 +347,18 @@
 		FD057A5A258F7B6100C67DEF /* SolarSystem */ = {
 			isa = PBXGroup;
 			children = (
+				82C8AD6A2604641700FBACC5 /* NewFiles */,
+				38D39D2625D81568001EACC8 /* DemoScene.swift */,
+				3899A0872597D0D900C265F7 /* Node.swift */,
+				3899A08C2597D15F00C265F7 /* Camera.swift */,
 				FD057A5F258F7B6100C67DEF /* ViewController.swift */,
 				388B129125C6C1E500B821C2 /* Animation.swift */,
 				FD057A76258F7E0500C67DEF /* Renderer.swift */,
 				38D39D2125D7FDF4001EACC8 /* Scene.swift */,
-				38D39D2625D81568001EACC8 /* DemoScene.swift */,
 				FD057A7D258F895200C67DEF /* Shaders.metal */,
 				38E7B5C425B61C6000D32001 /* PBR.metal */,
 				FD057A7A258F84DE00C67DEF /* Primitive.swift */,
 				38999E8B25927E5C00C265F7 /* Common.h */,
-				3899A0872597D0D900C265F7 /* Node.swift */,
-				3899A08C2597D15F00C265F7 /* Camera.swift */,
 				388B128C25C578B300B821C2 /* Lighting.swift */,
 				3899A0932597D1F400C265F7 /* Model.swift */,
 				3809898B259F5CF800F311C5 /* Texturable.swift */,
@@ -403,7 +417,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1220;
-				LastUpgradeCheck = 1230;
+				LastUpgradeCheck = 1240;
 				TargetAttributes = {
 					38999E3F25927A2B00C265F7 = {
 						CreatedOnToolsVersion = 12.2;
@@ -445,7 +459,9 @@
 				38D39DEC25DD9CBC001EACC8 /* venus.mtl in Resources */,
 				38D39DF725DD9E95001EACC8 /* mars.mtl in Resources */,
 				38D3A1E925F0065C001EACC8 /* rocket.mtl in Resources */,
+				82C8AD7B2604660E00FBACC5 /* Spaceship5.obj in Resources */,
 				38D39DF525DD9E95001EACC8 /* mars.obj in Resources */,
+				82C8AD792604660E00FBACC5 /* Spaceship5.mtl in Resources */,
 				38D39D5A25D870E6001EACC8 /* moon.obj in Resources */,
 				38D39DD025DD92E3001EACC8 /* sun.obj in Resources */,
 				38999E4C25927A2C00C265F7 /* Assets.xcassets in Resources */,
@@ -464,6 +480,8 @@
 			files = (
 				38D39DED25DD9CBC001EACC8 /* venus.mtl in Resources */,
 				38D39D5925D870E6001EACC8 /* moon.mtl in Resources */,
+				82C8AD7C2604660E00FBACC5 /* Spaceship5.obj in Resources */,
+				82C8AD7A2604660E00FBACC5 /* Spaceship5.mtl in Resources */,
 				38D39DDE25DD99BD001EACC8 /* mercury.mtl in Resources */,
 				38D39D3D25D85FD9001EACC8 /* earth.obj in Resources */,
 				38D39DE025DD99BD001EACC8 /* mercury.obj in Resources */,
@@ -495,11 +513,11 @@
 				3899A0B3259A513C00C265F7 /* ViewControllerExtension.swift in Sources */,
 				38999E8725927DDD00C265F7 /* MathLibrary.swift in Sources */,
 				38D39D2225D7FDF4001EACC8 /* Scene.swift in Sources */,
-				3803C1E4260294A200FE5A63 /* DebugBoundingBox.swift in Sources */,
 				388B128825C5741400B821C2 /* Renderable.swift in Sources */,
 				3899A0C3259C961400C265F7 /* DebugLights.metal in Sources */,
 				3899A0BE259C95F900C265F7 /* DebugLights.swift in Sources */,
 				388B129925C6CABA00B821C2 /* SphereAnimations.swift in Sources */,
+				82C8AD572604637B00FBACC5 /* Rocket.swift in Sources */,
 				38999E7525927CFC00C265F7 /* Renderer.swift in Sources */,
 				3899A0A32597D4D200C265F7 /* VertexDescriptor.swift in Sources */,
 				3899A0882597D0D900C265F7 /* Node.swift in Sources */,
@@ -508,12 +526,11 @@
 				38D39D1E25D7FCB1001EACC8 /* MotionController.swift in Sources */,
 				38E7B5C525B61C6000D32001 /* PBR.metal in Sources */,
 				38999E7425927CFC00C265F7 /* Shaders.metal in Sources */,
+				82C8AD602604639200FBACC5 /* RocketController.swift in Sources */,
 				3899A0942597D1F400C265F7 /* Model.swift in Sources */,
 				38D39D1625D7FA6A001EACC8 /* InputController.swift in Sources */,
 				3899A09E2597D45C00C265F7 /* Submesh.swift in Sources */,
 				38999E4325927A2B00C265F7 /* AppDelegate.swift in Sources */,
-				3803C1E6260294A200FE5A63 /* DebugBoundingBox.metal in Sources */,
-				3803C1DA2602876E00FE5A63 /* PhysicsController.swift in Sources */,
 				38999E4525927A2B00C265F7 /* SceneDelegate.swift in Sources */,
 				38999E7625927CFC00C265F7 /* Primitive.swift in Sources */,
 				388B129225C6C1E500B821C2 /* Animation.swift in Sources */,
@@ -527,18 +544,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E7B5C625B61C6000D32001 /* PBR.metal in Sources */,
-				3803C1E7260294A200FE5A63 /* DebugBoundingBox.metal in Sources */,
 				3899A0B7259A51D200C265F7 /* ViewControllerExtension.swift in Sources */,
 				3899A09F2597D45C00C265F7 /* Submesh.swift in Sources */,
 				388B128925C5741400B821C2 /* Renderable.swift in Sources */,
-				3803C1E5260294A200FE5A63 /* DebugBoundingBox.swift in Sources */,
 				3899A0952597D1F400C265F7 /* Model.swift in Sources */,
 				3899A08E2597D15F00C265F7 /* Camera.swift in Sources */,
-				3803C1DB2602876E00FE5A63 /* PhysicsController.swift in Sources */,
+				82C8AD5C2604638D00FBACC5 /* Rocket.swift in Sources */,
 				388B128E25C578B300B821C2 /* Lighting.swift in Sources */,
 				38999E7B25927CFC00C265F7 /* ViewController.swift in Sources */,
 				38999E7825927CFC00C265F7 /* Shaders.metal in Sources */,
 				3899A09A2597D41400C265F7 /* Mesh.swift in Sources */,
+				82C8AD632604639500FBACC5 /* RocketController.swift in Sources */,
 				3899A0C4259C961400C265F7 /* DebugLights.metal in Sources */,
 				3899A0A42597D4D200C265F7 /* VertexDescriptor.swift in Sources */,
 				38D39D0C25D7F742001EACC8 /* DemoView.swift in Sources */,
@@ -594,7 +610,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SolarSystem-iOS/SolarSystem-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZEHX8P57LY;
+				DEVELOPMENT_TEAM = 3E7TCD55JT;
 				INFOPLIST_FILE = "SolarSystem-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
@@ -618,7 +634,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SolarSystem-iOS/SolarSystem-iOS.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = ZEHX8P57LY;
+				DEVELOPMENT_TEAM = 3E7TCD55JT;
 				INFOPLIST_FILE = "SolarSystem-iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 13.1;
@@ -641,9 +657,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SolarSystem-macOS/SolarSystem_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = ZEHX8P57LY;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "SolarSystem-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -665,9 +682,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "SolarSystem-macOS/SolarSystem_macOS.entitlements";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = ZEHX8P57LY;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_HARDENED_RUNTIME = YES;
 				INFOPLIST_FILE = "SolarSystem-macOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (

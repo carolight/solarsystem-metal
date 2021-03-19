@@ -16,8 +16,6 @@ class Model: Node {
     
     var currentTime: Float = 0
     
-    let debugBoundingBox: DebugBoundingBox
-    
     init(name: String) {
         guard
             let assetUrl = Bundle.main.url(forResource: name, withExtension: nil) else {
@@ -46,7 +44,6 @@ class Model: Node {
         }
         
         samplerState = Model.buildSamplerState()
-        debugBoundingBox = DebugBoundingBox(boundingBox: asset.boundingBox)
         super.init()
         self.name = name
         self.boundingBox = asset.boundingBox
@@ -125,10 +122,6 @@ extension Model: Renderable {
                                                length: MemoryLayout<Material>.stride,
                                                index: Int(BufferIndexMaterials.rawValue))
                 render(renderEncoder: renderEncoder, submesh: submesh)
-            }
-            
-            if debugRenderBoundingBox {
-                debugBoundingBox.render(renderEncoder: renderEncoder, uniforms: uniforms)
             }
         }
     }

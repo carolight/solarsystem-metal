@@ -68,11 +68,26 @@ class Node {
         childNode.parent = nil
     }
     
-    var forwardVector: float3 {
+  func forwardVector() -> float3 {
+    normalize([sin(rotation.y), 0, cos(rotation.y)])
+  }
+
+  func rightVector() -> float3 {
+    [forwardVector().z, forwardVector().y, -forwardVector().x]
+  }
+
+    // ??
+    var forwardVectorXZ: float3 {
         return normalize([sin(rotation.y), 0, cos(rotation.y)])
     }
     
-    var rightVector: float3 {
-        return [forwardVector.z, forwardVector.y, -forwardVector.x]
+    // ??
+    var forwardVectorXY: float3 {
+        return normalize([-sin(rotation.z), cos(rotation.z), 0])
+    }
+    
+    // ??
+    var forwardVector3D: float3 {
+        return normalize([sin(rotation.y), -tan(rotation.x), cos(rotation.y)])
     }
 }

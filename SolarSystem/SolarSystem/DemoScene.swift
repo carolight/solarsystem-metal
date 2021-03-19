@@ -93,48 +93,41 @@ class DemoScene: Scene {
     let marsStartAngle: Float = 30
     
     
-    let rocket = Model(name: "rocket.obj")
-    let rocketStartPosition: float3 = [0, 0, -10]
+//    let rocket = Model(name: "rocket.obj")
+  // 
+  let rocket = Rocket(name: "Spaceship5.obj")
     
     override func setupScene() {
-        var spheres: [Node] = []
-        
         // earth oriented
         earth.position = [earthDistance, 0, 0]
         earth.scale = [planetScale, planetScale, planetScale]
         add(node: earth)
-        spheres.append(earth)
         
         // Sun
         sun.position = [0, 0, 0]
         sun.scale = [earth.scale.x * 3, earth.scale.y * 3, earth.scale.z * 3]
-        add(node: sun)
-        spheres.append(sun)
+//        add(node: sun)
         
         // Planets
         mercury.position = [mercuryDistance, 0, 0]
         mercury.scale = [earth.scale.x * 0.3, earth.scale.y * 0.3, earth.scale.z * 0.3]
-        add(node: mercury)
-        spheres.append(mercury)
+//        add(node: mercury)
         
         venus.position = [venusDistance, 0, 0]
         venus.scale = [earth.scale.x * 0.95, earth.scale.y * 0.95, earth.scale.z * 0.95]
-        add(node: venus)
-        spheres.append(venus)
+//        add(node: venus)
         
         moon.position = [moonDistance, 0, 0]
         moon.scale = [earth.scale.x * 0.27, earth.scale.y * 0.27, earth.scale.z * 0.27]
-        add(node: moon, parent: earth)
-        spheres.append(moon)
+//        add(node: moon, parent: earth)
         
         mars.position = [marsDistance, 0, 0]
         mars.scale = [earth.scale.x * 0.5, earth.scale.y * 0.5, earth.scale.z * 0.5]
-        add(node: mars)
-        spheres.append(mars)
+//        add(node: mars)
         
         // Rocket Object
-        rocket.position = rocketStartPosition
-        rocket.scale = [0.05, 0.05, 0.05]
+        rocket.position = [0, 0, -1]
+//        rocket.scale = [0.05, 0.05, 0.05]
         add(node: rocket)
         
         // Camera
@@ -157,18 +150,9 @@ class DemoScene: Scene {
         cameras.append(tpCameraForEarth)
         
         let tpCameraForRocket = ThirdPersonCamera(focus: rocket)
-        tpCameraForRocket.focusHeight = 0.25
+        tpCameraForRocket.focusHeight = 0
         tpCameraForRocket.focusDistance = 2
         cameras.append(tpCameraForRocket)
-        
-        #if os(iOS)
-        currentCameraIndex = 4
-        #endif
-        
-        physicsController.dynamicBody = rocket
-        for sphere in spheres {
-            physicsController.addStaticBody(node: sphere)
-        }
     }
     
     override func updateScene(deltaTime: Float) {
@@ -200,21 +184,6 @@ class DemoScene: Scene {
                          -cos((marsStartAngle + mars.currentTime) * marsOrbitalPeriod) * marsDistance]
     }
     
-    override func updatePlayer(deltaTime: Float) {
-        guard let node = inputController.player else { return }
-        
-        let holdPosition = node.position
-        let holdRotation = node.rotation
-        inputController.updatePlayer(deltaTime: deltaTime)
-        
-        if physicsController.checkCollisions() {
-            //MARK: You can send the rocket to start position
-            //check "rocketStartPosition"
-            node.position = holdPosition
-            node.rotation = holdRotation
-        }
-    }
-    
     override func sceneSizeWillChange(to size: CGSize) {
         super.sceneSizeWillChange(to: size)
         
@@ -228,7 +197,6 @@ class DemoScene: Scene {
     }
 }
 
-#if os(macOS)
 extension DemoScene: KeyboardDelegate {
     func keyPressed(key: KeyboardControl, state: InputState) -> Bool {
         switch key {
@@ -248,12 +216,10 @@ extension DemoScene: KeyboardDelegate {
             currentCameraIndex = 3
         case .key4:
             currentCameraIndex = 4
-        case .key0 where state == .ended:
-            debugRenderBoundingBox = !debugRenderBoundingBox
         default:
             break
         }
         return true
     }
 }
-#endif
+

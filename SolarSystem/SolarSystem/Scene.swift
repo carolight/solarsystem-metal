@@ -24,7 +24,6 @@ class Scene {
     let lighting = Lighting()
     
     let inputController = InputController()
-    let physicsController = PhysicsController()
     
     init(sceneSize: CGSize) {
         self.sceneSize = sceneSize
@@ -59,8 +58,8 @@ class Scene {
         // override this to update your scene
     }
     
-    func updatePlayer(deltaTime: Float) {
-        // override this to update your scene
+    private func updatePlayer(deltaTime: Float) {
+        inputController.updatePlayer(deltaTime: deltaTime)
     }
     
     final func add(node: Node,
